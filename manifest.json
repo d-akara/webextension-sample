@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+
+    "name": "Focus Mentor",
+    "description": "This extension provides a focus mentor assistant",
+    "version": "1.0",
+    "author": "Chad Meadows",
+
+    "browser_action": {
+        "default_title": "Focus Mentor",
+        "default_popup": "extension.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["dist/browser-polyfill.js","dist/PageInclude.js"],
+        "run_at": "document_start"
+    }],
+    "permissions": [
+        "activeTab"
+    ]
+}

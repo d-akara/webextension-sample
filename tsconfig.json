@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "outDir": "dist",
+        "sourceRoot": "./src",
+        "target": "esnext",
+        "sourceMap": true,
+        "typeRoots": ["@types", "node_modules/web-ext-types"]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
