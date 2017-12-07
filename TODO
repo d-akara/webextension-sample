@@ -1,2 +1,0 @@
-chrome doesn't support modules in extensions.
-Need to use webpack to bundle the Page Includes and the extension code separately

@@ -12,7 +12,7 @@
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
-        "js": ["dist/browser-polyfill.js","dist/PageInclude.js"],
+        "js": ["dist/polyfills.js","dist/page.js"],
         "run_at": "document_start"
     }],
     "permissions": [
