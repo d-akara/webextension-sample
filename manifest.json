@@ -6,15 +6,40 @@
     "version": "1.0",
     "author": "Chad Meadows",
 
+    // background for long term state
+    "background": {
+        "scripts": ["dist/polyfills.js","dist/background.js"]
+    },
+
+    // create a browser toolbar entry
     "browser_action": {
         "default_title": "Focus Mentor",
         "default_popup": "extension.html"
     },
+
+    // create a page toolbar entry
+
+
+    // runs in context of a loaded page
     "content_scripts": [{
         "matches": ["<all_urls>"],
-        "js": ["dist/polyfills.js","dist/page.js"],
+        "js": ["dist/polyfills.js", "dist/page.js"],
         "run_at": "document_start"
     }],
+
+    // developer tools panel
+    //"devtools_page": "",
+
+    // note, bindings do not show in chrome if there is already a pre-existing binding of same keys
+    "commands": {
+        "start": {
+            "suggested_key": {
+                "default": "Ctrl+K"
+            },
+        "description": "run command"
+        }
+    },
+
     "permissions": [
         "activeTab"
     ]

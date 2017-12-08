@@ -7,5 +7,6 @@ const fuse = FuseBox.init({
 fuse.bundle("polyfills").instructions(`> src/common/Polyfills.ts`).globals({'webextension-polyfill': 'browser'})
 fuse.bundle('page').instructions(">![src/PageInclude.ts]").watch('src/**')
 fuse.bundle('extension').instructions(">![src/ExtensionUI.ts]").watch('src/**')
+fuse.bundle('background').instructions(">![src/Background.ts]").watch('src/**')
 
 fuse.run()
