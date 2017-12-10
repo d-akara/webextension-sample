@@ -6,41 +6,35 @@
     "version": "1.0",
     "author": "Chad Meadows",
 
-    // background for long term state
-    "background": {
+    "background": { // background for long term state
         "scripts": ["dist/polyfills.js","dist/background.js"]
     },
 
-    // create a browser toolbar entry
-    "browser_action": {
+    "browser_action": {  // create a browser toolbar entry
         "default_title": "Focus Mentor",
-        "default_popup": "extension.html"
+        "default_popup": "src/BrowserToolbar.html"
     },
 
-    // create a page toolbar entry
-
-
-    // runs in context of a loaded page
-    "content_scripts": [{
+    "content_scripts": [{ // runs in context of a loaded page
         "matches": ["<all_urls>"],
-        "js": ["dist/polyfills.js", "dist/page.js"],
+        "js": ["dist/polyfills.js", "dist/page-proxy.js"],
         "run_at": "document_start"
     }],
 
-    // developer tools panel
-    //"devtools_page": "",
-
-    // note, bindings do not show in chrome if there is already a pre-existing binding of same keys
-    "commands": {
+    "commands": { // note, bindings do not show in chrome if there is already a pre-existing binding of same keys
         "start": {
             "suggested_key": {
-                "default": "Ctrl+K"
+                "default": "MacCtrl+K"
             },
-        "description": "run command"
+            "description": "run command"
         }
     },
-
+    
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "webNavigation"
     ]
+
+    // developer tools panel
+    //"devtools_page": "",
 }

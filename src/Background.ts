@@ -2,6 +2,16 @@ import * as WebExtensions from '../src/common/WebExtensions'
 
 console.log('Background loaded')
 
-browser.commands.onCommand.addListener(function(command) {
-    console.log("command:", command);
+WebExtensions.subscribeKeyCommandEvents((command)=>{
+    console.log("command:", command)
+    WebExtensions.createWindow('src/Popup.html').then(window=>console.log('created', window))
 });
+
+WebExtensions.subscribeMessages('page.event', (e)=> {
+    console.log('message received', e)
+    return 'response from background'
+})
+
+WebExtensions.listenContentLoaded((event:WebExtensions.EventSource)=> {
+    console.log('loaded event: ',event);
+})

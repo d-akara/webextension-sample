@@ -5,7 +5,7 @@
         "sourceRoot": ".",
         "target": "esnext",
         "moduleResolution": "node",
-        "sourceMap": true,
+        "outFile": "sample.js",
         "typeRoots": ["node_modules/@types", "node_modules/web-ext-types"]
     }
 }
