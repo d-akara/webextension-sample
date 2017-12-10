@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "Focus Mentor",
-    "description": "This extension provides a focus mentor assistant",
+    "name": "Sample Extension",
+    "description": "This extension provides ...",
     "version": "1.0",
     "author": "Chad Meadows",
 
@@ -11,7 +11,7 @@
     },
 
     "browser_action": {  // create a browser toolbar entry
-        "default_title": "Focus Mentor",
+        "default_title": "Sample Extension",
         "default_popup": "src/BrowserToolbar.html"
     },
 
