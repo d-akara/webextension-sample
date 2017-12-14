@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "module": "esnext",
+        "module": "system",
         "outDir": "dist",
         "sourceRoot": ".",
         "target": "esnext",
         "moduleResolution": "node",
         "outFile": "sample.js",
-        "typeRoots": ["node_modules/@types", "node_modules/web-ext-types"]
+        "typeRoots": ["node_modules/@types", "node_modules/web-ext-types"],
+        "baseUrl": "."
     }
 }

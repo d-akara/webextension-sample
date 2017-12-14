@@ -1,6 +1,4 @@
-import { EventSource } from './common/WebExtensions';
-
-import * as WebExtensions from '../src/common/WebExtensions'
+import * as WebExtensions from '../node_modules/webextension-common/src/WebExtensions'
 console.log("PageProxy loaded");
 
 WebExtensions.subscribeMessages('toolbar.event', (a,b)=>{
